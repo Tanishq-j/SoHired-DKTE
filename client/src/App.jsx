@@ -13,6 +13,7 @@ import ATSScanner from "./pages/ResumeAI/ATSScanner";
 import ResumeBuilder from "./pages/ResumeAI/ResumeBuilder";
 import AcceptedJobs from "./pages/Careers/AcceptedJobs";
 import RejectedJobs from "./pages/Careers/RejectedJobs";
+import YourOutreachs from "./pages/ColdOutreach/YourOutreachs";
 
 const App = () => {
     return (
@@ -57,7 +58,7 @@ const App = () => {
                 </ProtectedRoute>
             } />
 
-            
+
 
             <Route path="roadmaps" element={
                 <ProtectedRoute>
@@ -94,6 +95,12 @@ const App = () => {
             <Route path="resume-builder" element={
                 <ProtectedRoute>
                     <ResumeBuilder />
+                </ProtectedRoute>
+            } />
+
+            <Route path="cold-outreach/your-outreachs" element={
+                <ProtectedRoute>
+                    <YourOutreachs />
                 </ProtectedRoute>
             } />
 
