@@ -7,50 +7,60 @@ import Dashboard from "./pages/Dashboard";
 import MyProfile from "./pages/Settings/MyProfile";
 import MyAccount from "./pages/Settings/MyAccount";
 import JobPreferences from "./pages/Settings/JobPreferences";
+import CourseSuggestions from "./pages/Careers/CourseSuggestions";
 
 const App = () => {
-  return (
-    <Routes>
-      <Route path="/" element={<Landing />} />
-      <Route path="/onboarding" element={
-        <ProtectedRoute>
-          <Onboarding />
-        </ProtectedRoute>
-      } />
+    return (
+        <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/onboarding" element={
+                <ProtectedRoute>
+                    <Onboarding />
+                </ProtectedRoute>
+            } />
 
-      <Route path="/dashboard" element={<DashboardLayout />}>
-        <Route index element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        } />
+            <Route path="/dashboard" element={<DashboardLayout />}>
+                <Route index element={
+                    <ProtectedRoute>
+                        <Dashboard />
+                    </ProtectedRoute>
+                } />
 
-      </Route>
-      <Route path="my-profile" element={
-        <ProtectedRoute>
-          <MyProfile />
-        </ProtectedRoute>
-      } />
+            </Route>
+            <Route path="my-profile" element={
+                <ProtectedRoute>
+                    <MyProfile />
+                </ProtectedRoute>
+            } />
 
-      <Route path="my-account" element={
-        <ProtectedRoute>
-          <MyAccount />
-        </ProtectedRoute>
-      } />
+            <Route path="my-account" element={
+                <ProtectedRoute>
+                    <MyAccount />
+                </ProtectedRoute>
+            } />
 
-      <Route path="job-preferences" element={
-        <ProtectedRoute>
-          <JobPreferences />
-        </ProtectedRoute>
-      } />
+            <Route path="job-preferences" element={
+                <ProtectedRoute>
+                    <JobPreferences />
+                </ProtectedRoute>
+            } />
 
-      <Route path="roadmaps" element={
-        <ProtectedRoute>
-          <Roadmaps />
-        </ProtectedRoute>
-      } />
-    </Routes>
-  );
+
+            <Route path="course-suggestions" element={
+                <ProtectedRoute>
+                    <CourseSuggestions />
+                </ProtectedRoute>
+            } />
+
+            
+
+            <Route path="roadmaps" element={
+                <ProtectedRoute>
+                    <Roadmaps />
+                </ProtectedRoute>
+            } />
+        </Routes>
+    );
 };
 
 
