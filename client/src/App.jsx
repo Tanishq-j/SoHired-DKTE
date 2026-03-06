@@ -7,6 +7,9 @@ import Dashboard from "./pages/Dashboard";
 import MyProfile from "./pages/Settings/MyProfile";
 import MyAccount from "./pages/Settings/MyAccount";
 import JobPreferences from "./pages/Settings/JobPreferences";
+import CourseSuggestions from "./pages/Careers/CourseSuggestions";
+import Roadmaps from "./pages/Careers/Roadmaps";
+import ATSScanner from "./pages/ResumeAI/ATSScanner";
 
 const App = () => {
   return (
@@ -49,6 +52,21 @@ const App = () => {
           <Roadmaps />
         </ProtectedRoute>
       } />
+      <Route path="course-suggestions" element={
+                    <ProtectedRoute>
+                        <CourseSuggestions />
+                    </ProtectedRoute>
+                } />
+      <Route path="roadmaps" element={
+                    <ProtectedRoute>
+                        <Roadmaps />
+                    </ProtectedRoute>
+                } /> 
+      <Route path="ats-scanner" element={
+                    <ProtectedRoute>
+                        <ATSScanner />
+                    </ProtectedRoute>
+                } />      
     </Routes>
   );
 };
