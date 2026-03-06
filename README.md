@@ -1,1 +1,1 @@
-SoHired
+SoHired - AI Hiring Platform
