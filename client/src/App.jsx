@@ -9,38 +9,38 @@ import MyAccount from "./pages/Settings/MyAccount";
 import JobPreferences from "./pages/Settings/JobPreferences";
 
 const App = () => {
-    return (
-        <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/onboarding" element={
-                <ProtectedRoute>
-                    <Onboarding />
-                </ProtectedRoute>
-            } />
-            <Route path="/dashboard" element={<DashboardLayout />}>
-                <Route index element={
-                    <ProtectedRoute>
-                        <Dashboard />
-                    </ProtectedRoute>
-                } />
-            </Route>
-            <Route path="my-profile" element={
-                    <ProtectedRoute>
-                        <MyProfile />
-                    </ProtectedRoute>
-                } />
-                <Route path="my-account" element={
-                    <ProtectedRoute>
-                        <MyAccount />
-                    </ProtectedRoute>
-                } />
-                <Route path="job-preferences" element={
-                    <ProtectedRoute>
-                        <JobPreferences />
-                    </ProtectedRoute>
-                } />
-        </Routes>
-    );
+  return (
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/onboarding" element={
+        <ProtectedRoute>
+          <Onboarding />
+        </ProtectedRoute>
+      } />
+      <Route path="/dashboard" element={<DashboardLayout />}>
+        <Route index element={
+          <ProtectedRoute>
+            <Dashboard />
+          </ProtectedRoute>
+        } />
+      </Route>
+      <Route path="my-profile" element={
+        <ProtectedRoute>
+          <MyProfile />
+        </ProtectedRoute>
+      } />
+      <Route path="my-account" element={
+        <ProtectedRoute>
+          <MyAccount />
+        </ProtectedRoute>
+      } />
+      <Route path="job-preferences" element={
+        <ProtectedRoute>
+          <JobPreferences />
+        </ProtectedRoute>
+      } />
+    </Routes>
+  );
 };
 
 
