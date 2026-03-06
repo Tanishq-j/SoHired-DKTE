@@ -4,6 +4,9 @@ import Onboarding from "./pages/Onbording";
 import ProtectedRoute from "./components/auth/ProtectedRoute";
 import DashboardLayout from "./layouts/DashboardLayout";
 import Dashboard from "./pages/Dashboard";
+import MyProfile from "./pages/Settings/MyProfile";
+import MyAccount from "./pages/Settings/MyAccount";
+import JobPreferences from "./pages/Settings/JobPreferences";
 
 const App = () => {
     return (
@@ -21,6 +24,21 @@ const App = () => {
                     </ProtectedRoute>
                 } />
             </Route>
+            <Route path="my-profile" element={
+                    <ProtectedRoute>
+                        <MyProfile />
+                    </ProtectedRoute>
+                } />
+                <Route path="my-account" element={
+                    <ProtectedRoute>
+                        <MyAccount />
+                    </ProtectedRoute>
+                } />
+                <Route path="job-preferences" element={
+                    <ProtectedRoute>
+                        <JobPreferences />
+                    </ProtectedRoute>
+                } />
         </Routes>
     );
 };
