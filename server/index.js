@@ -5,7 +5,10 @@ import jobRoutes from "./routes/jobs.routes.js";
 import roadmapRoutes from "./routes/roadmap.routes.js";
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: "*",
+    credentials: true
+}));
 app.use(express.json());
 
 app.use("/api/user", userRoutes);

@@ -218,7 +218,7 @@ const Onboarding = () => {
             }
 
             const res = await axios.post(`${import.meta.env.VITE_SERVER_API}/api/user/user-profile`, payload)
-            // console.log("User Profile Response:", res.data);
+            console.log("User Profile Response:", res.data);
             setSelectedRole(response.data.jobPreferences.selectedRole);
             setSelectedExperienceLevel(response.data.jobPreferences.selectedExperienceLevel);
             setSelectedJobTypes(response.data.jobPreferences.selectedJobTypes)
